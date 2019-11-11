@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://TopDownTwinStickController/Controller.gd" type="Script" id=1]
+
+[node name="Controller" type="Spatial"]
+transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 0 )
+script = ExtResource( 1 )
+CameraPath = NodePath("InnerGimbal/Camera")
+
+[node name="InnerGimbal" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.45646, 0 )
+
+[node name="Camera" type="Camera" parent="InnerGimbal"]
+transform = Transform( 1, 0, 0, 0, 0.499999, 0.866025, 0, -0.866025, 0.5, 0, 4, 4 )
+current = true
